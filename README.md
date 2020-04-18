@@ -8,7 +8,10 @@
 * MyBatis、Mapper
 * Thymeleaf
 
-
+## 项目版本
+项目分为两个版本：
+1. [单体项目](https://github.com/KasyapaLee/spring-boot-petclinic/tree/%E5%8D%95%E4%BD%93%E9%A1%B9%E7%9B%AE)
+2. [多模块项目](https://github.com/KasyapaLee/spring-boot-petclinic/tree/master)
 ## 参考
 * [Spring Petclinic 项目](https://github.com/spring-petclinic)
 * [Spring Boot 集成 MyBatis, 分页插件 PageHelper, 通用 Mapper](https://github.com/abel533/MyBatis-Spring-Boot)
