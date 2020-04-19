@@ -125,4 +125,10 @@ public class ClinicServiceImpl implements ClinicService {
     public List<Owner> findAllOwners() {
         return ownerMapper.selectAll();
     }
+
+
+    @Override
+    public void deleteOwner(Owner owner) {
+        ownerMapper.delete(owner);
+    }
 }

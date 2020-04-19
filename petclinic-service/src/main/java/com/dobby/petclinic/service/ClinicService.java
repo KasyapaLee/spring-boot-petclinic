@@ -34,4 +34,6 @@ public interface ClinicService {
 
     List<Owner> findAllOwners();
 
+    void deleteOwner(Owner owner);
+
 }

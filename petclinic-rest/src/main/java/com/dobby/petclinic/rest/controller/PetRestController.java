@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
  * @date 2019-01-18
  */
 @RestController
-public class VetController {
+public class PetRestController {
+
+
+
 
 }
