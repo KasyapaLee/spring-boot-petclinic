@@ -5,6 +5,8 @@ import com.dobby.petclinic.domain.*;
 import com.dobby.petclinic.service.ClinicService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -91,7 +93,12 @@ public class ClinicServiceImpl implements ClinicService {
 
     @Override
     public List<Vet> findAllVets() {
-        return vetMapper.selectAll();
+        List<Vet> vets = vetMapper.selectAll();
+        for (Vet vet : vets) {
+            List<Specialty> specialties = specialtyMapper.findByVetId(vet.getId());
+            vet.setSpecialties(new HashSet<>(specialties));
+        }
+        return vets;
     }
 
     @Override
