@@ -23,6 +23,8 @@ import java.util.List;
 @Controller
 public class OwnerController {
 
+
+
     @Autowired
     private ClinicService clinicService;
 
