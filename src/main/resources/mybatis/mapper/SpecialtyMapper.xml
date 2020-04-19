@@ -2,4 +2,12 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.dobby.petclinic.mapper.SpecialtyMapper">
 
+    <select id="findByVetId" resultType="com.dobby.petclinic.domain.Specialty">
+
+            select s.id, s.name
+            from specialties s
+                     left join vet_specialties vs on s.id = vs.specialty_id
+            where vs.vet_id = #{vetId}
+
+    </select>
 </mapper>
